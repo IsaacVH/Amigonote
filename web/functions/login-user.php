@@ -10,7 +10,7 @@
 	}
 
 
-	header("Location: /home");
+	header("Location: /contacts");
 
 	/*
 	$url = parse_url(getenv("CLEARDB_DATABASE_URL"));

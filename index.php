@@ -4,10 +4,15 @@
 	$request = explode("/", $_SERVER['REQUEST_URI']);
 	$pagename = $request[1];
 
-	$page = $pages[$pagename];
+	if($pagename !== "") {
+		$page = $pages[$pagename];
+	} else {
+		$page = null;
+	}
+
 	if($page == null) {
 		$pagename = "login";
-		$page = ["header" => false, "title" => "Log In", "css" => "/web/css/login.css", "js" => "/web/js/login.js"];
+		$page = ["header" => false, "menu" => false, "title" => "Log In", "css" => "/web/css/login.css", "js" => "/web/js/login.js"];
 	}
 ?>
 
@@ -48,6 +53,11 @@
 					// Do nothing
 				} else {
 					include("web/layouts/header.php");
+				}
+
+				if ($page['menu'] !== null && $page['menu'] == false) {
+					// Do nothing
+				} else {
 					include("web/layouts/drawer_menu.php");
 				}
 			?>

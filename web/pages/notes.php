@@ -1,5 +1,5 @@
 <?php
-	$page['title'] = 'Home';
+	$page['title'] = 'Notes';
 ?>
 
 <div>
