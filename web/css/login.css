@@ -8,7 +8,8 @@ h2 {
 	text-align: center;
 	font-weight: bold;
 	text-transform: uppercase;
-	color: #3F51B5;
+	/*color: #3F51B5;*/
+	color:white;
 }
 
 .form-box {

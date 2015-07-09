@@ -35,7 +35,8 @@
 		else 
 			$backgroundImage = false;
 	?>
-	<body <?php echo $backgroundImage ? 'style="background-image: url(\'/web/assets/Alien_Ink_2560X1600_Abstract_Background.jpg\');"' : ''; ?>>
+	<!-- <body /*<?php echo $backgroundImage ? 'style="background-image: url(\'/web/assets/log-sign.jpg\');"' : ''; ?> > -->
+	<body>
 		<!-- Always shows a header, even in smaller screens. -->
 		<div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
 			<?php
