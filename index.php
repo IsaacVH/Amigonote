@@ -1,5 +1,6 @@
 <?php 
 	include("web/settings/config.php");
+
 	$request = explode("/", $_SERVER['REQUEST_URI']);
 	$pagename = $request[1];
 
@@ -22,6 +23,7 @@
 			}
 		?>
 		<script src="/web/lib/mdl/material.min.js"></script>
+		<script src="/web/lib/jquery/jquery-2.1.4.min.js"></script>
 		<?php
 			if($pages['js'] != null) {
 				echo '<script src="'.$page['js'].'"></script>';
