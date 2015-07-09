@@ -6,7 +6,8 @@
 
 	$page = $pages[$pagename];
 	if($page == null) {
-		$page = ["header" => true, "title" => "Home", "css" => "/web/css/home.css", "js" => "/web/js/home.js"];
+		$pagename = "login";
+		$page = ["header" => false, "title" => "Log In", "css" => "/web/css/login.css", "js" => "/web/js/login.js"];
 	}
 ?>
 

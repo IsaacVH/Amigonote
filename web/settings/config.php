@@ -1,6 +1,6 @@
 <?php
 
-	$config["site-title"] = "Lanotamigo";
+	$config["site-title"] = "Lanoda";
 
 	$pages = [
 		"login" => ["header" => false, "title" => "Log In", "css" => "/web/css/login.css", "js" => "/web/js/login.js"],
