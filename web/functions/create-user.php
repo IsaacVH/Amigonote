@@ -22,7 +22,7 @@
 	$result = $conn->query("INSERT INTO user ('Email', 'Password') VALUES ('" . $_GET['email'] . "', '" . $_GET['password'] . "')");
 	$result->close();
 	$conn->close();
-	header("Location: /home");
+	header("Location: /contacts");
 
     /*
 
