@@ -4,15 +4,10 @@ html {
 
 body {
 	height: 100%;
-}
-
-body header {
-	height: 100px;
+	background-size: 100%;
 }
 
 body main {
-	max-width: 1000px;
 	margin: 0 auto;
-	background-color: lightgray;
-	min-height: calc(100% - 100px);
+	padding: 3%;
 }
