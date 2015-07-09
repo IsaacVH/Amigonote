@@ -19,16 +19,10 @@
 	$db = substr($url["path"], 1);
 
 	$conn = new mysqli($server, $username, $password, $db);
-	$result = $conn->query("SELECT * FROM user WHERE Email = '$_GET['email']' AND Password = $_GET['password']");
-
-	while($row = $result->fetch_row());
-	{
-		$rows[]=$row;
-	}
-
+	$result = $conn->query("INSERT INTO user ('Email', 'Password') VALUES ('" . $_GET['email'] . "', '" . $_GET['password'] . "')");
 	$result->close();
 	$conn->close();
-	header("Location: /home?user=" . $rows[0]);
+	header("Location: /home");
 
     /*
 

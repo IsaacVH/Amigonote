@@ -6,6 +6,10 @@
 	function submitUserLogin() {
 		$("#loginForm").submit();
 	}
+
+	function goToSignUp() {
+		window.location.href = "/signup";
+	}
 </script>
 
 <div id="login-content">
@@ -25,7 +29,7 @@
 		</form>
 	</div>
 	<div class="login-buttons">
-		<button class="sign-up-button">Sign Up</button>
+		<button class="sign-up-button" onclick="goToSignUp()">Sign Up</button>
 		<button class="log-in-button" onclick="submitUserLogin()">Log In</button>
 	</div>
 </div>
