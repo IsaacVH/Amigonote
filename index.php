@@ -6,7 +6,7 @@
 
 	$page = $pages[$pagename];
 	if($page == null) {
-		$page = ["header" => true, "title" => "Home", "css" => "/web/css/home.css"];
+		$page = ["header" => true, "title" => "Home", "css" => "/web/css/home.css", "js" => "/web/js/home.js"];
 	}
 ?>
 
@@ -25,7 +25,7 @@
 		<script src="/web/lib/mdl/material.min.js"></script>
 		<script src="/web/lib/jquery/jquery-2.1.4.min.js"></script>
 		<?php
-			if($pages['js'] != null) {
+			if($page['js'] != null) {
 				echo '<script src="'.$page['js'].'"></script>';
 			}
 		?>
@@ -39,8 +39,9 @@
 	?>
 	<!-- <body /*<?php echo $backgroundImage ? 'style="background-image: url(\'/web/assets/log-sign.jpg\');"' : ''; ?> > -->
 	<body>
-		<!-- Always shows a header, even in smaller screens. -->
-		<div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+		<!-- The drawer is always open in large screens. The header is always shown, even in small screens. -->
+		<div class="demo-layout">
+		  <div class="mdl-layout mdl-js-layout mdl-layout--fixed-drawer mdl-layout--fixed-header">
 			<?php
 				if ($page['header'] !== null && $page['header'] == false) {
 					// Do nothing
@@ -49,8 +50,7 @@
 					include("web/layouts/drawer_menu.php");
 				}
 			?>
-					<main class="mdl-layout__content">
-
+			<main class="mdl-layout__content">
 				<!-- <div class="page-content"> -->
 					<?php 
 						// the 12 strips the subdirectory my app is running in

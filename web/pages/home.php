@@ -3,5 +3,6 @@
 ?>
 
 <div>
-	This is the home page.
+	<div></div>
+	<div></div>
 </div>
