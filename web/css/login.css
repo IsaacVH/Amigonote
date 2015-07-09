@@ -28,15 +28,29 @@ h2 {
 
 .form-box {
 	padding: 40px;
-	background-color: white;
+	background-color: rgba(0, 0, 0, 0.5);
 }
 
 .form-box .mdl-textfield {
 	width: 100%;
 }
 
+.form-box .mdl-textfield input {
+	border-color: lightgray;
+	color: white;
+	font-weight: bold;
+}
+
+.form-box .mdl-textfield__label {
+   color: lightgray;
+}
+
+.mdl-textfield__label:after {
+	background-color: #6cc0c0;
+}
+
 .blue-border {
-	border: 2px solid #3F51B5;
+	border: 2px solid #6cc0c0;
 }
 
 .login-buttons {
@@ -51,7 +65,7 @@ h2 {
 	box-sizing: border-box;
 	border: 0;
 	outline: none;
-	border-bottom: 2px solid #3F51B5;
+	border-bottom: 2px solid #6cc0c0;
 	font-size: 18px;
 	font-weight: bold;
 	text-transform: uppercase;
@@ -63,14 +77,14 @@ h2 {
 
 .login-buttons > .sign-up-button {
 	background-color: white;
-	border-right: 1px solid #3F51B5;
-	border-left: 2px solid #3F51B5;
-	color: #3F51B5;
+	border-right: 1px solid #6cc0c0;
+	border-left: 2px solid #6cc0c0;
+	color: #6cc0c0;
 }
 
 .login-buttons > .log-in-button {
-	background-color: #3F51B5;
-	border-right: 2px solid #3F51B5;
-	border-left: 1px solid #3F51B5;
+	background-color: #6cc0c0;
+	border-right: 2px solid #6cc0c0;
+	border-left: 1px solid #6cc0c0;
 	color: white;
 }
