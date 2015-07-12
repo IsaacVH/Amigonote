@@ -1,11 +1,15 @@
-html {
-}
+/*
+Colors:
+@DarkBlue #1b1464
+@Purple #93278f
+@LightBlue #7ac1ed
+@LightGrey #999999
+@Mint_Teal #6cc0c0
+*/
 
 body {
 	height: 100%;
 	 
-
-
 }
 
 body main {
@@ -29,9 +33,9 @@ body main {
 
 .mdl-layout__header {
 	background-color: #6cc0c0;
-	border-bottom: 4px solid white;
+	/*border-bottom: 4px solid white;*/
 	position: relative;
-	z-index: 6;
+	/*z-index: 6;*/
 }
 
 .mdl-layout__header .mdl-layout__drawer-button {
@@ -41,4 +45,9 @@ body main {
 .mdl-layout-title {
 	background-color: #6cc0c0;
 	border-bottom: 4px solid white;
+}
+
+.mdl-layout__drawer {
+	top: 64px;
+	height: calc(100% - 68px);
 }

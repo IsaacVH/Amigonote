@@ -1,5 +1,5 @@
 <?php 
-	include("web/settings/config.php");
+	require_once("web/settings/config.php");
 
 	$request = explode("/", $_SERVER['REQUEST_URI']);
 	$pagename = $request[1];
@@ -10,9 +10,10 @@
 		$page = null;
 	}
 
-	if($page == null) {
-		$pagename = "login";
-		$page = ["header" => false, "menu" => false, "title" => "Log In", "css" => "/web/css/login.css", "js" => "/web/js/login.js"];
+	if($pagename != "login" && !isset($_SESSION['user'])) {
+		header("Location: /login");
+	} else if($page == null) {
+		header("Location: /contacts");
 	}
 ?>
 
