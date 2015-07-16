@@ -11,12 +11,13 @@
 
 	if($result) {
 	    if (isset($_GET['returnURL'])){
-			header("Location: " . $_GET['returnURL']);
+			//header("Location: " . $_GET['returnURL']);
 		} else {
-			header("Location: /contacts");
+			//header("Location: /contacts");
 		}
 	} else {
-		header("Location: /login?error=Login%20Failed");
+		//header("Location: /login?error=Login%20Failed");
 	}
+	var_dump($result);
 
 ?>

@@ -4,17 +4,19 @@
 	$request = explode("/", $_SERVER['REQUEST_URI']);
 	$pagename = $request[1];
 
+	$page = null;
+
 	if($pagename !== "") {
 		$page = $pages[$pagename];
-	} else {
-		$page = null;
 	}
 
-	if($pagename != "login" && !isset($_SESSION['user'])) {
+	if($pagename != "login" && $pagename != "signup" && !isset($_SESSION['user'])) {
 		header("Location: /login");
 	} else if($page == null) {
 		header("Location: /contacts");
 	}
+
+	$_SESSION["alert"] = ["has-alert" => true, "text" => "This is a test alert"];
 ?>
 
 <!DOCTYPE html>
@@ -46,6 +48,7 @@
 	?>
 	<!-- <body /*<?php echo $backgroundImage ? 'style="background-image: url(\'/web/assets/log-sign.jpg\');"' : ''; ?> > -->
 	<body>
+		<?php if ($_SESSION["alert"]["has-alert"]) { include("web/layouts/alert.php"); }  ?>
 		<!-- The drawer is always open in large screens. The header is always shown, even in small screens. -->
 		<div class="demo-layout">
 		  <div class="mdl-layout mdl-js-layout mdl-layout--fixed-drawer mdl-layout--fixed-header">
