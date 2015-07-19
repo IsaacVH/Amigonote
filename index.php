@@ -62,7 +62,7 @@
 				if ($page['menu'] !== null && $page['menu'] == false) {
 					// Do nothing
 				} else {
-					include("web/layouts/drawer_menu.php");
+					include("web/layouts/drawer.php");
 				}
 			?>
 			<main class="mdl-layout__content">

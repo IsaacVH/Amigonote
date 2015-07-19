@@ -1,0 +1,2 @@
+=== lanoda Config Vars
+CLEARDB_DATABASE_URL: mysql://b47bc1d23ae80f:1ae76a71@us-cdbr-iron-east-02.cleardb.net/heroku_b01bc1abd955627?reconnect=true
