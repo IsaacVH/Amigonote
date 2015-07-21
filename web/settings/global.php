@@ -44,7 +44,7 @@
 			echo $query . "<br />";
 
 			if ($result === FALSE) { 
-				$final_result = new QueryResult(false, mysqli_connect_error(), null); 
+				$final_result = new QueryResult(false, mysqli_error($conn), null); 
 			} else {
 				if ($result->num_rows > 0) {
 					while($row = $result->fetch_assoc()) {

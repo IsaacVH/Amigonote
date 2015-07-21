@@ -46,7 +46,7 @@
 		else 
 			$backgroundImage = false;
 	?>
-	<!-- <body /*<?php echo $backgroundImage ? 'style="background-image: url(\'/web/assets/log-sign.jpg\');"' : ''; ?> > -->
+	
 	<body>
 		<?php if ($_SESSION["alert"]["has-alert"]) { include("web/layouts/alert.php"); }  ?>
 		<!-- The drawer is always open in large screens. The header is always shown, even in small screens. -->

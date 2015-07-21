@@ -9,8 +9,11 @@
 			if(isset($_SESSION['user'])) { 
 				echo $_SESSION['user']['FirstName'];
 			} else { 
-				echo "none"; 
-			} 
+				echo "none";
+			}
+
+
+			require_once("/web/operations/contact.php");
 		?>
 	</div>
 	<div></div>
